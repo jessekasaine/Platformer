@@ -4,7 +4,10 @@ public partial class Player : CharacterBody2D
 {
 	public const float Speed = 130.0f;
 	public const float JumpVelocity = -300.0f;
-
+	public override void _Ready()
+	{
+		GD.Print("Im a player");
+	}
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
