@@ -9,7 +9,7 @@ public partial class Coin : Area2D
 	}
 
 	//Called when a body enters a certain Area2d
-	private void OnBodyEntered(Node2D body)
+	private void OnBodyEntered(Godot.Node2D body)
 	{
 		GD.Print($"+1 for {body.Name}");
 	}
