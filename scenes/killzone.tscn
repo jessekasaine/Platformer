@@ -2,12 +2,11 @@
 
 [ext_resource type="Script" path="res://scripts/Killzone.cs" id="1_g36ei"]
 
-[node name="Killzone" type="Area2D" node_paths=PackedStringArray("_timer")]
+[node name="Killzone" type="Area2D"]
 script = ExtResource("1_g36ei")
-_timer = NodePath("Timer")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
 one_shot = true
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]
-[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]

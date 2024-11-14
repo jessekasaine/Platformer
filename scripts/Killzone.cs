@@ -3,14 +3,20 @@ using System;
 
 public partial class Killzone : Area2D
 {
-    [Export] private Timer _timer;
+    //[Export] private Timer _timer;
     private void OnBodyEntered(Node2D body)
     {
         
-        //_timer.GetTree().ReloadCurrentScene();
         GD.Print("You died");
-        _timer.Start();
-        _timer.Timeout += OnTimerTimeOut;
+
+        //connects to Timer node
+        var timer = GetNode<Timer>("Timer");
+
+        //starts timer when body enters killzone
+        timer.Start();
+
+        //Call the OnTimerTimeOut() method after the timer ends
+        timer.Timeout += OnTimerTimeOut;
     }
     private void OnTimerTimeOut()
     {   
