@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class Coin : Area2D
 {
@@ -8,8 +7,8 @@ public partial class Coin : Area2D
 		GD.Print("Im a coin");
 	}
 
-	//Called when a body enters a certain Area2d
-	private void OnBodyEntered(Godot.Node2D body)
+	//Called when a body enters a certain Area 2d
+	private void OnBodyEntered(Node2D body)
 	{
 		GD.Print($"+1 for {body.Name}");
 	}

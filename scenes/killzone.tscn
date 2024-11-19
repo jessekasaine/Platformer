@@ -10,3 +10,4 @@ wait_time = 4.0
 one_shot = true
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]

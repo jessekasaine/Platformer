@@ -1,13 +1,13 @@
 using Godot;
-using System;
 
+namespace Platformer.scripts;
 public partial class Killzone : Area2D
 {
     //[Export] private Timer _timer;
     private void OnBodyEntered(Node2D body)
     {
-        
-        GD.Print("You died");
+
+        GD.Print($"{body.Name} died");
 
         //connects to Timer node
         var timer = GetNode<Timer>("Timer");
@@ -20,7 +20,7 @@ public partial class Killzone : Area2D
     }
     private void OnTimerTimeOut()
     {   
-        //_limit.Timeout -= OnTimerTimeOut;
+        //_timer.Timeout -= OnTimerTimeOut;
         GD.Print("Game restarted");
         GetTree().ReloadCurrentScene();
     }

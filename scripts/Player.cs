@@ -2,8 +2,8 @@ using Godot;
 
 public partial class Player : CharacterBody2D
 {
-	public const float Speed = 130.0f;
-	public const float JumpVelocity = -300.0f;
+	private readonly float _speed = 130.0f;
+	private readonly float _jumpVelocity = -300.0f;
 	public override void _Ready()
 	{
 		GD.Print("Im a player");
@@ -21,7 +21,7 @@ public partial class Player : CharacterBody2D
 		// Handle Jump.
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
 		{
-			velocity.Y = JumpVelocity;
+			velocity.Y = _jumpVelocity;
 		}
 
 		// Get the input direction and handle the movement/deceleration.
@@ -29,11 +29,11 @@ public partial class Player : CharacterBody2D
 		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 		if (direction != Vector2.Zero)
 		{
-			velocity.X = direction.X * Speed;
+			velocity.X = direction.X * _speed;
 		}
 		else
 		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+			velocity.X = Mathf.MoveToward(Velocity.X, 0, _speed);
 		}
 
 		Velocity = velocity;
