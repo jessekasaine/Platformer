@@ -231,7 +231,7 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_bgmfm")]
 z_index = 5
-position = Vector2(7, -19)
+position = Vector2(-88, -46)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -10)
@@ -277,7 +277,7 @@ autoplay = "move"
 [node name="Enemy" type="Node" parent="."]
 
 [node name="Slime2" parent="Enemy" instance=ExtResource("7_o4rwv")]
-position = Vector2(-48, 30)
+position = Vector2(-47, 30)
 
 [node name="Slime3" parent="Enemy" instance=ExtResource("7_o4rwv")]
 position = Vector2(-49, -35)

@@ -1,5 +1,6 @@
 using Godot;
 
+namespace Platformer.scripts;
 public partial class Coin : Area2D
 {
 	public override void _Ready()
@@ -10,9 +11,12 @@ public partial class Coin : Area2D
 	//Called when a body enters a certain Area 2d
 	private void OnBodyEntered(Node2D body)
 	{
+		if (body is Player)
+		{
+			QueueFree();
+		}
 	}
 }
-
 
 
 // Called when the node enters the scene tree for the first time.

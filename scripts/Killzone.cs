@@ -8,6 +8,8 @@ public partial class Killzone : Area2D
     {
 
         GD.Print($"{body.Name} died");
+        Engine.TimeScale = 0.5;
+        body.GetNode<CollisionShape2D>("CollisionShape2D").QueueFree();
 
         //connects to Timer node
         var timer = GetNode<Timer>("Timer");
@@ -22,6 +24,7 @@ public partial class Killzone : Area2D
     {   
         //_timer.Timeout -= OnTimerTimeOut;
         GD.Print("Game restarted");
+        Engine.TimeScale = 1;
         GetTree().ReloadCurrentScene();
     }
 }

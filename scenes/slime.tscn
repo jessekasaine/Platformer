@@ -43,8 +43,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldkv5"]
-size = Vector2(10, 10.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc37l"]
+size = Vector2(14, 12)
 
 [node name="Slime" type="CharacterBody2D"]
 script = ExtResource("1_mmkys")
@@ -69,5 +69,5 @@ target_position = Vector2(-11, 0)
 position = Vector2(0, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, 0.75)
-shape = SubResource("RectangleShape2D_ldkv5")
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_kc37l")
