@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3jsyw2a7it3w"]
+[gd_scene load_steps=9 format=3 uid="uid://d3jsyw2a7it3w"]
 
 [ext_resource type="Texture2D" uid="uid://ds5u8sn2q84qr" path="res://assets/sprites/slime_green.png" id="1_gu25g"]
+[ext_resource type="Script" path="res://scripts/Slime.cs" id="1_mmkys"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g34me"]
 size = Vector2(10, 12)
@@ -42,6 +43,7 @@ animations = [{
 }]
 
 [node name="Slime" type="CharacterBody2D"]
+script = ExtResource("1_mmkys")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)

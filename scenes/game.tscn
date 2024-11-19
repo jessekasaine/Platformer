@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://x04yuq61ugdl"]
+[gd_scene load_steps=14 format=4 uid="uid://x04yuq61ugdl"]
 
 [ext_resource type="PackedScene" uid="uid://c0dq1q32qh0pm" path="res://scenes/player.tscn" id="1_bgmfm"]
 [ext_resource type="Texture2D" uid="uid://c7bl0rt66i7b" path="res://assets/sprites/world_tileset.png" id="3_ioxhd"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dahub5pci0xe2" path="res://scenes/killzone.tscn" id="5_68pn7"]
 [ext_resource type="PackedScene" uid="uid://chfu45xr6b7k3" path="res://scenes/coin.tscn" id="5_x5lhd"]
 [ext_resource type="PackedScene" uid="uid://b8s6mstv238x2" path="res://scenes/slime_enemy.tscn" id="7_8xh5n"]
+[ext_resource type="PackedScene" uid="uid://d3jsyw2a7it3w" path="res://scenes/slime.tscn" id="7_o4rwv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jym5b"]
 texture = ExtResource("3_ioxhd")
@@ -277,10 +278,10 @@ autoplay = "move"
 [node name="Enemy" type="Node" parent="."]
 
 [node name="SlimeEnemy" parent="Enemy" instance=ExtResource("7_8xh5n")]
-position = Vector2(-109, 38)
-
-[node name="SlimeEnemy2" parent="Enemy" instance=ExtResource("7_8xh5n")]
-position = Vector2(90, -10)
+position = Vector2(-49, -26)
 
 [node name="SlimeEnemy3" parent="Enemy" instance=ExtResource("7_8xh5n")]
 position = Vector2(424, 38)
+
+[node name="Slime" parent="." instance=ExtResource("7_o4rwv")]
+position = Vector2(-87, 38)
